@@ -1,0 +1,12 @@
+# GenerateQrCode201ResponseMeta
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**encoding** | Option<**String**> | Response encoding | [optional]
+**content_type** | Option<**String**> | Response content type. | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
