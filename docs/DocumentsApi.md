@@ -4,13 +4,15 @@ All URIs are relative to *https://us1.pdfgeneratorapi.com/api/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{publicId} | Delete document
+[**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{publicId}/actions | Delete document
 [**generate_document**](DocumentsApi.md#generate_document) | **POST** /documents/generate | Generate document
 [**generate_document_asynchronous**](DocumentsApi.md#generate_document_asynchronous) | **POST** /documents/generate/async | Generate document (async)
 [**generate_document_batch**](DocumentsApi.md#generate_document_batch) | **POST** /documents/generate/batch | Generate document (batch)
 [**generate_document_batch_asynchronous**](DocumentsApi.md#generate_document_batch_asynchronous) | **POST** /documents/generate/batch/async | Generate document (batch + async)
 [**get_async_job_status**](DocumentsApi.md#get_async_job_status) | **GET** /documents/async/{jobId} | Get job status
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{publicId} | Get document
+[**get_document_actions**](DocumentsApi.md#get_document_actions) | **GET** /documents/{publicId}/actions | Get document actions
+[**get_document_versions**](DocumentsApi.md#get_document_versions) | **GET** /documents/{publicId}/versions | Get document versions
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get documents
 [**store_document**](DocumentsApi.md#store_document) | **POST** /documents | Store document
 
@@ -78,7 +80,7 @@ Name | Type | Description  | Required | Notes
 
 ## generate_document_asynchronous
 
-> models::InlineObject20 generate_document_asynchronous(generate_document_asynchronous_request)
+> models::InlineObject22 generate_document_asynchronous(generate_document_asynchronous_request)
 Generate document (async)
 
 Merges template with data as asynchronous job and makes POST request to callback URL defined in the request. Request uses the same format as response of synchronous generation endpoint. The job id is also added to the callback request as header PDF-API-Job-Id  *Example response from callback URL:* ``` {   \"response\": \"https://us1.pdfgeneratorapi.com/share/12821/VBERi0xLjcKJeLjz9MKNyAwIG9i\",   \"meta\": {     \"name\": \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",     \"display_name\": \"a2bd25b8921f3dc7a440fd7f427f90a4\",     \"encoding\": \"binary\",     \"content-type\": \"application/pdf\"   } } ``` 
@@ -92,7 +94,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject20**](inline_object_20.md)
+[**models::InlineObject22**](inline_object_22.md)
 
 ### Authorization
 
@@ -138,7 +140,7 @@ Name | Type | Description  | Required | Notes
 
 ## generate_document_batch_asynchronous
 
-> models::InlineObject20 generate_document_batch_asynchronous(generate_document_batch_asynchronous_request)
+> models::InlineObject22 generate_document_batch_asynchronous(generate_document_batch_asynchronous_request)
 Generate document (batch + async)
 
 Merges template with data as asynchronous job and makes POST request to callback URL defined in the request. Request uses the same format as response of synchronous generation endpoint. The job id is also added to the callback request as header PDF-API-Job-Id  *Example response from callback URL:* ``` {   \"response\": \"https://us1.pdfgeneratorapi.com/share/12821/VBERi0xLjcKJeLjz9MKNyAwIG9i\",   \"meta\": {     \"name\": \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",     \"display_name\": \"a2bd25b8921f3dc7a440fd7f427f90a4\",     \"encoding\": \"binary\",     \"content-type\": \"application/pdf\"   } } ``` 
@@ -152,7 +154,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject20**](inline_object_20.md)
+[**models::InlineObject22**](inline_object_22.md)
 
 ### Authorization
 
@@ -213,6 +215,66 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::InlineObject11**](inline_object_11.md)
+
+### Authorization
+
+[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_document_actions
+
+> models::InlineObject17 get_document_actions(public_id)
+Get document actions
+
+Returns a list of actions performed on a stored document
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**public_id** | **String** | Resource public id | [required] |
+
+### Return type
+
+[**models::InlineObject17**](inline_object_17.md)
+
+### Authorization
+
+[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_document_versions
+
+> models::InlineObject16 get_document_versions(public_id)
+Get document versions
+
+Returns a list of versions for a stored document
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**public_id** | **String** | Resource public id | [required] |
+
+### Return type
+
+[**models::InlineObject16**](inline_object_16.md)
 
 ### Authorization
 

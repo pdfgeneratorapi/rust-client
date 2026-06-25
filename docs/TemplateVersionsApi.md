@@ -44,7 +44,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_template_version
 
-> models::InlineObject16 get_template_version(template_id, template_version)
+> models::InlineObject18 get_template_version(template_id, template_version)
 Get template version
 
 Returns the template definition of the specified version. 
@@ -59,7 +59,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## copy_template
 
-> models::InlineObject16 copy_template(template_id, copy_template_request)
+> models::InlineObject18 copy_template(template_id, copy_template_request)
 Copy template
 
 Creates a copy of a template to the workspace specified in authentication parameters.
@@ -35,7 +35,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_template
 
-> models::InlineObject16 create_template(template_definition_new)
+> models::InlineObject18 create_template(template_definition_new)
 Create template
 
 Creates a new template. If template configuration is not specified in the request body then an empty template is created. Template is placed to the workspace specified in authentication params. Template configuration must be sent in the request body.
@@ -65,7 +65,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_template
 
-> models::InlineObject16 get_template(template_id)
+> models::InlineObject18 get_template(template_id)
 Get template
 
 Returns template configuration
@@ -125,7 +125,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Required | Notes
 
 ## import_template
 
-> models::InlineObject16 import_template(import_template_request)
+> models::InlineObject18 import_template(import_template_request)
 Import template
 
 Creates a template from existing PDF
@@ -246,7 +246,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Required | Notes
 
 ## update_template
 
-> models::InlineObject16 update_template(template_id, template_definition_new)
+> models::InlineObject18 update_template(template_id, template_definition_new)
 Update template
 
 Updates template configuration. The template configuration for pages and layout must be complete as the entire configuration is replaced and not merged.
@@ -308,7 +308,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject16**](inline_object_16.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
