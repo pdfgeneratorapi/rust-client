@@ -4,11 +4,12 @@ All URIs are relative to *https://us1.pdfgeneratorapi.com/api/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{publicId}/actions | Delete document
+[**delete_document**](DocumentsApi.md#delete_document) | **DELETE** /documents/{publicId} | Delete document
 [**generate_document**](DocumentsApi.md#generate_document) | **POST** /documents/generate | Generate document
 [**generate_document_asynchronous**](DocumentsApi.md#generate_document_asynchronous) | **POST** /documents/generate/async | Generate document (async)
 [**generate_document_batch**](DocumentsApi.md#generate_document_batch) | **POST** /documents/generate/batch | Generate document (batch)
 [**generate_document_batch_asynchronous**](DocumentsApi.md#generate_document_batch_asynchronous) | **POST** /documents/generate/batch/async | Generate document (batch + async)
+[**generate_viewer_url**](DocumentsApi.md#generate_viewer_url) | **POST** /documents/{publicId} | Get document with prefill
 [**get_async_job_status**](DocumentsApi.md#get_async_job_status) | **GET** /documents/async/{jobId} | Get job status
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{publicId} | Get document
 [**get_document_actions**](DocumentsApi.md#get_document_actions) | **GET** /documents/{publicId}/actions | Get document actions
@@ -155,6 +156,37 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::InlineObject22**](inline_object_22.md)
+
+### Authorization
+
+[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## generate_viewer_url
+
+> models::GenerateViewerUrl200Response generate_viewer_url(public_id, generate_viewer_url_request)
+Get document with prefill
+
+Returns a URL for a stored document, optionally with viewer prefill data. The prefill is encrypted server-side and embedded in the viewer URL, so the caller does not have to handle encryption. Prefill is only applied when `output` is `viewer`. 
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**public_id** | **String** | Resource public id | [required] |
+**generate_viewer_url_request** | Option<[**GenerateViewerUrlRequest**](GenerateViewerUrlRequest.md)> | Optional response format and viewer prefill data. |  |
+
+### Return type
+
+[**models::GenerateViewerUrl200Response**](generateViewerUrl_200_response.md)
 
 ### Authorization
 
