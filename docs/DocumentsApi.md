@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**get_async_job_status**](DocumentsApi.md#get_async_job_status) | **GET** /documents/async/{jobId} | Get job status
 [**get_document**](DocumentsApi.md#get_document) | **GET** /documents/{publicId} | Get document
 [**get_document_actions**](DocumentsApi.md#get_document_actions) | **GET** /documents/{publicId}/actions | Get document actions
+[**get_document_signatures**](DocumentsApi.md#get_document_signatures) | **GET** /documents/{publicId}/signatures | Validate document signatures
 [**get_document_versions**](DocumentsApi.md#get_document_versions) | **GET** /documents/{publicId}/versions | Get document versions
 [**get_documents**](DocumentsApi.md#get_documents) | **GET** /documents | Get documents
 [**store_document**](DocumentsApi.md#store_document) | **POST** /documents | Store document
@@ -81,7 +82,7 @@ Name | Type | Description  | Required | Notes
 
 ## generate_document_asynchronous
 
-> models::InlineObject22 generate_document_asynchronous(generate_document_asynchronous_request)
+> models::InlineObject23 generate_document_asynchronous(generate_document_asynchronous_request)
 Generate document (async)
 
 Merges template with data as asynchronous job and makes POST request to callback URL defined in the request. Request uses the same format as response of synchronous generation endpoint. The job id is also added to the callback request as header PDF-API-Job-Id  *Example response from callback URL:* ``` {   \"response\": \"https://us1.pdfgeneratorapi.com/share/12821/VBERi0xLjcKJeLjz9MKNyAwIG9i\",   \"meta\": {     \"name\": \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",     \"display_name\": \"a2bd25b8921f3dc7a440fd7f427f90a4\",     \"encoding\": \"binary\",     \"content-type\": \"application/pdf\"   } } ``` 
@@ -95,7 +96,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject22**](inline_object_22.md)
+[**models::InlineObject23**](inline_object_23.md)
 
 ### Authorization
 
@@ -141,7 +142,7 @@ Name | Type | Description  | Required | Notes
 
 ## generate_document_batch_asynchronous
 
-> models::InlineObject22 generate_document_batch_asynchronous(generate_document_batch_asynchronous_request)
+> models::InlineObject23 generate_document_batch_asynchronous(generate_document_batch_asynchronous_request)
 Generate document (batch + async)
 
 Merges template with data as asynchronous job and makes POST request to callback URL defined in the request. Request uses the same format as response of synchronous generation endpoint. The job id is also added to the callback request as header PDF-API-Job-Id  *Example response from callback URL:* ``` {   \"response\": \"https://us1.pdfgeneratorapi.com/share/12821/VBERi0xLjcKJeLjz9MKNyAwIG9i\",   \"meta\": {     \"name\": \"a2bd25b8921f3dc7a440fd7f427f90a4.pdf\",     \"display_name\": \"a2bd25b8921f3dc7a440fd7f427f90a4\",     \"encoding\": \"binary\",     \"content-type\": \"application/pdf\"   } } ``` 
@@ -155,7 +156,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject22**](inline_object_22.md)
+[**models::InlineObject23**](inline_object_23.md)
 
 ### Authorization
 
@@ -262,7 +263,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_document_actions
 
-> models::InlineObject17 get_document_actions(public_id)
+> models::InlineObject18 get_document_actions(public_id)
 Get document actions
 
 Returns a list of actions performed on a stored document
@@ -273,6 +274,37 @@ Returns a list of actions performed on a stored document
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **public_id** | **String** | Resource public id | [required] |
+
+### Return type
+
+[**models::InlineObject18**](inline_object_18.md)
+
+### Authorization
+
+[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_document_signatures
+
+> models::InlineObject17 get_document_signatures(public_id, version)
+Validate document signatures
+
+Reports on every digital signature a stored document carries: who signed, when a timestamp authority attested it, whether the signed bytes are unchanged and whether the certificate chains to a trusted root.  Facts are reported separately from the verdict, because a reader and a validation library can disagree in both directions. `status` reduces them to one answer, worst case first.  Each request consumes one credit. A request that reports `unavailable` — signature validation not being enabled on the deployment — validates nothing and is not charged. 
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**public_id** | **String** | Resource public id | [required] |
+**version** | Option<**String**> | Which stored version to report on. A version identifier reports on that version, `initial` on the document as first generated. Defaults to the latest version. A version is always reported on as itself: reporting the latest would describe bytes the caller is not holding.  |  |
 
 ### Return type
 

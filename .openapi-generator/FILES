@@ -21,6 +21,8 @@ docs/CreateWorkspaceRequest.md
 docs/DataBatchInner.md
 docs/Document.md
 docs/DocumentAction.md
+docs/DocumentSignature.md
+docs/DocumentSignatures.md
 docs/DocumentUser.md
 docs/DocumentVersion.md
 docs/DocumentsApi.md
@@ -87,11 +89,11 @@ docs/InlineObject19.md
 docs/InlineObject1Response.md
 docs/InlineObject2.md
 docs/InlineObject20.md
-docs/InlineObject20Meta.md
 docs/InlineObject21.md
+docs/InlineObject21Meta.md
 docs/InlineObject22.md
-docs/InlineObject22Response.md
 docs/InlineObject23.md
+docs/InlineObject23Response.md
 docs/InlineObject24.md
 docs/InlineObject25.md
 docs/InlineObject26.md
@@ -99,6 +101,8 @@ docs/InlineObject27.md
 docs/InlineObject28.md
 docs/InlineObject29.md
 docs/InlineObject3.md
+docs/InlineObject30.md
+docs/InlineObject31.md
 docs/InlineObject4.md
 docs/InlineObject5.md
 docs/InlineObject6.md
@@ -190,6 +194,8 @@ src/models/create_workspace_request.rs
 src/models/data_batch_inner.rs
 src/models/document.rs
 src/models/document_action.rs
+src/models/document_signature.rs
+src/models/document_signatures.rs
 src/models/document_user.rs
 src/models/document_version.rs
 src/models/encrypt_and_decrypt_base64.rs
@@ -253,11 +259,11 @@ src/models/inline_object_19.rs
 src/models/inline_object_1_response.rs
 src/models/inline_object_2.rs
 src/models/inline_object_20.rs
-src/models/inline_object_20_meta.rs
 src/models/inline_object_21.rs
+src/models/inline_object_21_meta.rs
 src/models/inline_object_22.rs
-src/models/inline_object_22_response.rs
 src/models/inline_object_23.rs
+src/models/inline_object_23_response.rs
 src/models/inline_object_24.rs
 src/models/inline_object_25.rs
 src/models/inline_object_26.rs
@@ -265,6 +271,8 @@ src/models/inline_object_27.rs
 src/models/inline_object_28.rs
 src/models/inline_object_29.rs
 src/models/inline_object_3.rs
+src/models/inline_object_30.rs
+src/models/inline_object_31.rs
 src/models/inline_object_4.rs
 src/models/inline_object_5.rs
 src/models/inline_object_6.rs

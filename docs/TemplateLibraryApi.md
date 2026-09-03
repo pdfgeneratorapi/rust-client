@@ -41,7 +41,7 @@ No authorization required
 
 ## get_template_library_item
 
-> models::InlineObject18 get_template_library_item(public_id)
+> models::InlineObject19 get_template_library_item(public_id)
 Open template from the library
 
 Returns the template definition for a public template identified by its `public_id`. 
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject18**](inline_object_18.md)
+[**models::InlineObject19**](inline_object_19.md)
 
 ### Authorization
 

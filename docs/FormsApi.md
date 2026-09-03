@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## create_form
 
-> models::InlineObject19 create_form(form_configuration_new)
+> models::InlineObject20 create_form(form_configuration_new)
 Create form
 
 Creates a new form based on the configuration sent in the request body.
@@ -32,7 +32,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject20**](inline_object_20.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_form
 
-> models::InlineObject19 get_form(form_id)
+> models::InlineObject20 get_form(form_id)
 Get form
 
 Returns form configuration
@@ -92,7 +92,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject20**](inline_object_20.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Required | Notes
 
 ## import_form
 
-> models::InlineObject19 import_form(import_form_request)
+> models::InlineObject20 import_form(import_form_request)
 Import Form
 
 Creates a new form based on editable PDF
@@ -153,7 +153,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject20**](inline_object_20.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Required | Notes
 
 ## open_form_builder
 
-> models::InlineObject21 open_form_builder()
+> models::InlineObject22 open_form_builder()
 Open new form builder
 
 Creates a new Form Builder session and returns a URL that can be used to open the embeddable Form Builder for creating a new form.
@@ -180,7 +180,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**models::InlineObject21**](inline_object_21.md)
+[**models::InlineObject22**](inline_object_22.md)
 
 ### Authorization
 
@@ -196,10 +196,40 @@ This endpoint does not need any parameter.
 
 ## open_form_builder_for_existing_form
 
-> models::InlineObject21 open_form_builder_for_existing_form(form_id)
+> models::InlineObject22 open_form_builder_for_existing_form(form_id)
 Open existing form builder
 
 Creates a Form Builder session for editing an existing form and returns a URL that can be used to open the embeddable Form Builder.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**form_id** | **i32** | Form unique identifier | [required] |
+
+### Return type
+
+[**models::InlineObject22**](inline_object_22.md)
+
+### Authorization
+
+[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## share_form
+
+> models::InlineObject21 share_form(form_id)
+Share form
+
+Creates an unique sharing URL to collect form data
 
 ### Parameters
 
@@ -224,39 +254,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## share_form
-
-> models::InlineObject20 share_form(form_id)
-Share form
-
-Creates an unique sharing URL to collect form data
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**form_id** | **i32** | Form unique identifier | [required] |
-
-### Return type
-
-[**models::InlineObject20**](inline_object_20.md)
-
-### Authorization
-
-[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## update_form
 
-> models::InlineObject19 update_form(form_id, form_configuration_new)
+> models::InlineObject20 update_form(form_id, form_configuration_new)
 Update form
 
 Updates the form configuration. The form configuration must be complete as the entire configuration is replaced and not merged.
@@ -271,7 +271,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject20**](inline_object_20.md)
 
 ### Authorization
 

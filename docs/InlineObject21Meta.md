@@ -1,10 +1,10 @@
-# InlineObject22Response
+# InlineObject21Meta
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**job_id** | Option<**String**> | Unique job id which is also added to the callback request as header PDF-API-Job-Id | [optional]
+**public_id** | Option<**String**> | Form sharing unique identifier | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
