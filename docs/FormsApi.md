@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_form**](FormsApi.md#create_form) | **POST** /forms | Create form
 [**delete_form**](FormsApi.md#delete_form) | **DELETE** /forms/{formId} | Delete form
 [**get_form**](FormsApi.md#get_form) | **GET** /forms/{formId} | Get form
+[**get_form_schema**](FormsApi.md#get_form_schema) | **GET** /forms/schema | Get schema
 [**get_forms**](FormsApi.md#get_forms) | **GET** /forms | Get forms
 [**import_form**](FormsApi.md#import_form) | **POST** /forms/import | Import Form
 [**open_form_builder**](FormsApi.md#open_form_builder) | **POST** /forms/open | Open new form builder
@@ -106,9 +107,36 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## get_form_schema
+
+> serde_json::Value get_form_schema()
+Get schema
+
+Returns Form JSON Schema which defines the structure of the Form Definition.
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**serde_json::Value**](serde_json::Value.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## get_forms
 
-> models::InlineObject6 get_forms(page, per_page)
+> models::InlineObject6 get_forms(page, per_page, order_by, order_direction, search)
 Get forms
 
 Returns a list of forms available for the organization
@@ -120,6 +148,9 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **page** | Option<**i32**> | Pagination: page to return |  |[default to 1]
 **per_page** | Option<**i32**> | Pagination: How many records to return per page |  |[default to 15]
+**order_by** | Option<**String**> | Field to sort the forms by |  |[default to id]
+**order_direction** | Option<**String**> | Sort direction |  |[default to desc]
+**search** | Option<**String**> | Returns forms whose name or ID contains the search value |  |
 
 ### Return type
 
@@ -142,7 +173,7 @@ Name | Type | Description  | Required | Notes
 > models::InlineObject20 import_form(import_form_request)
 Import Form
 
-Creates a new form based on editable PDF
+Creates a new form based on editable PDF. Form fields are created from the editable fields of the PDF. The optional `form` object sets the form name, template, actions and configuration.
 
 ### Parameters
 
