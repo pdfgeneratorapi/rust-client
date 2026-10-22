@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// FormActionStore : Key-value pair of action configuration.
+/// FormActionStore : Saves the generated document to Document Storage.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct FormActionStore {
     #[serde(rename = "store_document", skip_serializing_if = "Option::is_none")]
@@ -19,7 +19,7 @@ pub struct FormActionStore {
 }
 
 impl FormActionStore {
-    /// Key-value pair of action configuration.
+    /// Saves the generated document to Document Storage.
     pub fn new() -> FormActionStore {
         FormActionStore {
             store_document: None,

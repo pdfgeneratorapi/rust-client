@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct FormActionSendSendDocument {
-    /// URL where the generated document will be delivered. Must use HTTPS.
+    /// URL that receives the submitted answers as JSON, and the generated document when the form also stores it. Must use HTTPS.
     #[serde(rename = "url")]
     pub url: String,
     /// Optional HTTP headers to include with the delivery request.

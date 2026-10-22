@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// FormActionSend : Sends the generated document via HTTP POST request to the specified URL.
+/// FormActionSend : Posts the submitted answers as JSON to the specified HTTPS URL. When the form also stores the document (store_document) and has a template, the request includes the generated document as well; otherwise only the answers are sent.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct FormActionSend {
     #[serde(rename = "send_document", skip_serializing_if = "Option::is_none")]
@@ -19,7 +19,7 @@ pub struct FormActionSend {
 }
 
 impl FormActionSend {
-    /// Sends the generated document via HTTP POST request to the specified URL.
+    /// Posts the submitted answers as JSON to the specified HTTPS URL. When the form also stores the document (store_document) and has a template, the request includes the generated document as well; otherwise only the answers are sent.
     pub fn new() -> FormActionSend {
         FormActionSend {
             send_document: None,

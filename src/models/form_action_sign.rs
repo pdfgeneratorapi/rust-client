@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// FormActionSign : Asks the person who submitted the form to sign the generated document.
+/// FormActionSign : Lets the person who fills in the form view and sign the generated document.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct FormActionSign {
     #[serde(rename = "sign_document", skip_serializing_if = "Option::is_none")]
@@ -19,7 +19,7 @@ pub struct FormActionSign {
 }
 
 impl FormActionSign {
-    /// Asks the person who submitted the form to sign the generated document.
+    /// Lets the person who fills in the form view and sign the generated document.
     pub fn new() -> FormActionSign {
         FormActionSign {
             sign_document: None,

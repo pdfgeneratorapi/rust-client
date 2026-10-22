@@ -11,7 +11,7 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// FormActionDownload : Key-value pair of action configuration.
+/// FormActionDownload : Lets the person who fills in the form download the generated document.
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct FormActionDownload {
     #[serde(rename = "download_document", skip_serializing_if = "Option::is_none")]
@@ -19,7 +19,7 @@ pub struct FormActionDownload {
 }
 
 impl FormActionDownload {
-    /// Key-value pair of action configuration.
+    /// Lets the person who fills in the form download the generated document.
     pub fn new() -> FormActionDownload {
         FormActionDownload {
             download_document: None,
