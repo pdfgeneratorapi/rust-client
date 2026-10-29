@@ -296,7 +296,7 @@ Name | Type | Description  | Required | Notes
 > models::InlineObject19 update_template(template_id, template_definition_new)
 Update template
 
-Updates template configuration. The template configuration for pages and layout must be complete as the entire configuration is replaced and not merged.
+Updates template configuration. Each top-level field sent (name, layout, pages and the rest) replaces the stored one, so pages must be complete, with every component.
 
 ### Parameters
 

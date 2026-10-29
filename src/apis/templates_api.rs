@@ -537,7 +537,7 @@ pub async fn open_editor(configuration: &configuration::Configuration, template_
     }
 }
 
-/// Updates template configuration. The template configuration for pages and layout must be complete as the entire configuration is replaced and not merged.
+/// Updates template configuration. Each top-level field sent (name, layout, pages and the rest) replaces the stored one, so pages must be complete, with every component.
 pub async fn update_template(configuration: &configuration::Configuration, template_id: i32, template_definition_new: models::TemplateDefinitionNew) -> Result<models::InlineObject19, Error<UpdateTemplateError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_template_id = template_id;

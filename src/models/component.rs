@@ -90,6 +90,8 @@ pub enum Cls {
     FooterComponent,
     #[serde(rename = "rectangleComponent")]
     RectangleComponent,
+    #[serde(rename = "ellipseComponent")]
+    EllipseComponent,
     #[serde(rename = "vlineComponent")]
     VlineComponent,
     #[serde(rename = "hlineComponent")]
