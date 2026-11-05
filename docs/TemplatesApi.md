@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## copy_template
 
-> models::InlineObject19 copy_template(template_id, copy_template_request)
+> models::InlineObject18 copy_template(template_id, copy_template_request)
 Copy template
 
 Creates a copy of a template to the workspace specified in authentication parameters.
@@ -35,7 +35,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_template
 
-> models::InlineObject19 create_template(template_definition_new)
+> models::InlineObject18 create_template(template_definition_new)
 Create template
 
 Creates a new template. If template configuration is not specified in the request body then an empty template is created. Template is placed to the workspace specified in authentication params. Template configuration must be sent in the request body.
@@ -65,7 +65,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_template
 
-> models::InlineObject19 get_template(template_id)
+> models::InlineObject18 get_template(template_id)
 Get template
 
 Returns template configuration
@@ -125,7 +125,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_template_schema
 
-> serde_json::Value get_template_schema()
+> models::GetTemplateSchema200Response get_template_schema()
 Get schema
 
 Returns Template JSON Schema which defines the structure of the Template Definition.
@@ -182,11 +182,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**models::GetTemplateSchema200Response**](getTemplateSchema_200_response.md)
 
 ### Authorization
 
-[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -198,7 +198,7 @@ This endpoint does not need any parameter.
 
 ## get_templates
 
-> models::InlineObject4 get_templates(name, tags, access, page, per_page)
+> models::InlineObject4 get_templates(name, tags, access, page, per_page, order_by, order_direction, search)
 Get templates
 
 Returns a list of templates available for the authenticated workspace
@@ -213,6 +213,9 @@ Name | Type | Description  | Required | Notes
 **access** | Option<**String**> | Filter template by access type. No values returns all templates. private - returns only private templates, organization - returns only organization templates. |  |[default to ]
 **page** | Option<**i32**> | Pagination: page to return |  |[default to 1]
 **per_page** | Option<**i32**> | Pagination: How many records to return per page |  |[default to 15]
+**order_by** | Option<**String**> | Field to sort the templates by. Ignored when `name` or `tags` is set. |  |[default to updated_at]
+**order_direction** | Option<**String**> | Sort direction. Ignored when `name` or `tags` is set. |  |[default to desc]
+**search** | Option<**String**> | Returns templates whose ID, name, tags, creation date or modification date contains the search value. Ignored when `name` or `tags` is set. |  |
 
 ### Return type
 
@@ -232,7 +235,7 @@ Name | Type | Description  | Required | Notes
 
 ## import_template
 
-> models::InlineObject19 import_template(import_template_request)
+> models::InlineObject18 import_template(import_template_request)
 Import template
 
 Creates a template from existing PDF
@@ -246,7 +249,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -293,10 +296,10 @@ Name | Type | Description  | Required | Notes
 
 ## update_template
 
-> models::InlineObject19 update_template(template_id, template_definition_new)
+> models::InlineObject18 update_template(template_id, template_definition_update)
 Update template
 
-Updates template configuration. Each top-level field sent (name, layout, pages and the rest) replaces the stored one, so pages must be complete, with every component.
+Updates template configuration. Each top-level field sent (name, layout, pages and the rest) replaces the stored one, so pages must be complete, with every component. A field left out keeps its stored value, the name included.
 
 ### Parameters
 
@@ -304,11 +307,11 @@ Updates template configuration. Each top-level field sent (name, layout, pages a
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **template_id** | **i32** | Template unique identifier | [required] |
-**template_definition_new** | [**TemplateDefinitionNew**](TemplateDefinitionNew.md) | Template configuration | [required] |
+**template_definition_update** | [**TemplateDefinitionUpdate**](TemplateDefinitionUpdate.md) | The template configuration to change | [required] |
 
 ### Return type
 
-[**models::InlineObject19**](inline_object_19.md)
+[**models::InlineObject18**](inline_object_18.md)
 
 ### Authorization
 
@@ -342,7 +345,7 @@ Name | Type | Description  | Required | Notes
 
 ### Authorization
 
-[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+No authorization required
 
 ### HTTP request headers
 

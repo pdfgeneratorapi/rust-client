@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | Option<[**models::TemplateParamId**](templateParam_id.md)> |  | [optional]
+**id** | Option<[**models::CreateFacturXeInvoiceRequestTemplateId**](createFacturXEInvoice_request_template_id.md)> |  | [optional]
 **version_id** | Option<**i32**> | Template version ID | [optional]
 **data** | Option<[**models::TemplateParamData**](templateParam_data.md)> |  | [optional]
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **created_at** | Option<**String**> | Timestamp when the template was created | [optional]
 **updated_at** | Option<**String**> | Timestamp when the template was updated | [optional]
 **tags** | Option<**Vec<String>**> | A list of tags assigned to a template | [optional]
+**is_draft** | Option<**bool**> | True if the template is a draft | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

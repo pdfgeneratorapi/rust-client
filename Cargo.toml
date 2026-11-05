@@ -1,6 +1,6 @@
 [package]
 name = "pdf-generator-api-client"
-version = "8.0.31"
+version = "8.0.34"
 authors = ["support@pdfgeneratorapi.com"]
 description = "Rust client for the PDF Generator API, auto-generated from the OpenAPI spec."
 repository = "https://github.com/pdfgeneratorapi/rust-client"
@@ -15,4 +15,5 @@ serde_with = { version = "^3.8", default-features = false, features = ["base64",
 serde_json = "^1.0"
 serde_repr = "^0.1"
 url = "^2.5"
+uuid = { version = "^1.8", features = ["serde", "v4"] }
 reqwest = { version = "^0.12", default-features = false, features = ["json", "multipart"] }

@@ -115,6 +115,7 @@ pub mod assets_api;
 pub mod conversion_api;
 pub mod documents_api;
 pub mod e_invoices_api;
+pub mod fonts_api;
 pub mod forms_api;
 pub mod misc_api;
 pub mod services_api;

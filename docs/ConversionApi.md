@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## convert_html2_pdf
 
-> models::InlineObject9 convert_html2_pdf(convert_html2_pdf_request)
+> models::InlineObject8 convert_html2_pdf(convert_html2_pdf_request)
 HTML to PDF
 
 Converts HTML content to PDF
@@ -26,7 +26,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Required | Notes
 
 ## convert_pdf2_image
 
-> models::InlineObject10 convert_pdf2_image(convert_pdf2_image_request)
+> std::path::PathBuf convert_pdf2_image(convert_pdf2_image_request)
 PDF to Image
 
 Converts PDF document to images. Provide either a base64 encoded PDF or a public URL to a PDF file.
@@ -56,7 +56,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject10**](inline_object_10.md)
+[**std::path::PathBuf**](std::path::PathBuf.md)
 
 ### Authorization
 
@@ -65,14 +65,14 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: application/zip, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## convert_url2_pdf
 
-> models::InlineObject9 convert_url2_pdf(convert_url2_pdf_request)
+> models::InlineObject8 convert_url2_pdf(convert_url2_pdf_request)
 URL to PDF
 
 Converts public URL to PDF.  By default the page is printed once its network activity settles. Pages that keep making background requests (e.g. single-page applications) can signal when they have finished rendering with `wait_for_css` and/or `wait_for_js`; the page is then printed as soon as the signal is met. When both are given, both must be met. 
@@ -86,7 +86,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 

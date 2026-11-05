@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## generate_qr_code
 
-> models::GenerateQrCode201Response generate_qr_code(generate_qr_code_request)
+> std::path::PathBuf generate_qr_code(generate_qr_code_request)
 Generate QR Code
 
 Creates a QR code based on the configuration
@@ -24,7 +24,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GenerateQrCode201Response**](generateQRCode_201_response.md)
+[**std::path::PathBuf**](std::path::PathBuf.md)
 
 ### Authorization
 
@@ -33,7 +33,7 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
+- **Accept**: image/png, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

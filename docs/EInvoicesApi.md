@@ -43,10 +43,10 @@ Name | Type | Description  | Required | Notes
 
 ## create_factur_xe_invoice
 
-> models::InlineObject9 create_factur_xe_invoice(create_factur_xe_invoice_request)
+> models::InlineObject8 create_factur_xe_invoice(create_factur_xe_invoice_request)
 Create Factur-X eInvoice
 
-This endpoint transforms a JSON payload a Factur-X e-invoice that is fully compliant with the European EN 16931 standard. The generated output is always a PDF document, embedding a structured CII (Cross-Industry Invoice) XML according to the Factur-X format into a human-readable invoice, ensuring interoperability across B2B and B2G platforms. The JSON payload follows Peppol BIS Billing 3.0 UBL Invoice described here: https://docs.peppol.eu/poacc/billing/3.0/
+This endpoint transforms a JSON payload a Factur-X e-invoice that is fully compliant with the European EN 16931 standard. The generated output is always a PDF document, embedding a structured CII (Cross-Industry Invoice) XML according to the Factur-X format into a human-readable invoice, ensuring interoperability across B2B and B2G platforms. The JSON payload follows Peppol BIS Billing 3.0 UBL Invoice described here: https://docs.peppol.eu/poacc/billing/3.0/ Preview mode (`testing: true`) is not available for Factur-X.
 
 ### Parameters
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_x_rechnung_e_invoice
 
-> models::InlineObject create_x_rechnung_e_invoice(create_e_invoice_request)
+> models::InlineObject create_x_rechnung_e_invoice(create_x_rechnung_e_invoice_request)
 Create XRechnung eInvoice
 
 This endpoint transforms a JSON payload into an XML-based XRechnung e-invoice that is fully compliant with the European EN 16931 standard. The generated output follows the XRechnung format and can be formatted in either UBL (Universal Business Language) or CII (Cross-Industry Invoice) syntax, ensuring interoperability across B2B and B2G platforms. The JSON payload follows Peppol BIS Billing 3.0 UBL Invoice described here: https://docs.peppol.eu/poacc/billing/3.0/
@@ -83,7 +83,7 @@ This endpoint transforms a JSON payload into an XML-based XRechnung e-invoice th
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**create_e_invoice_request** | [**CreateEInvoiceRequest**](CreateEInvoiceRequest.md) | eInvoice conversion | [required] |
+**create_x_rechnung_e_invoice_request** | [**CreateXRechnungEInvoiceRequest**](CreateXRechnungEInvoiceRequest.md) | eInvoice conversion | [required] |
 
 ### Return type
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_e_invoice_schema
 
-> serde_json::Value get_e_invoice_schema()
+> models::GetEInvoiceSchema200Response get_e_invoice_schema()
 Get schema
 
 Returns e-invoice JSON schema which defines the structure of the e-invoice.
@@ -114,11 +114,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**serde_json::Value**](serde_json::Value.md)
+[**models::GetEInvoiceSchema200Response**](getEInvoiceSchema_200_response.md)
 
 ### Authorization
 
-[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+No authorization required
 
 ### HTTP request headers
 

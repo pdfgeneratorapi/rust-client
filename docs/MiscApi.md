@@ -25,7 +25,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[JSONWebTokenAuth](../README.md#JSONWebTokenAuth)
+No authorization required
 
 ### HTTP request headers
 

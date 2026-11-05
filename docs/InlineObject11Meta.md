@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **display_name** | Option<**String**> | Document name without the file extension. | [optional]
 **encoding** | Option<**String**> | Document encoding | [optional]
 **content_type** | Option<**String**> | Document content type. | [optional]
-**public_id** | Option<**String**> | Document public id | [optional]
+**stats** | Option<[**models::InlineObject11MetaStats**](inline_object_11_meta_stats.md)> |  | [optional]
+**public_id** | Option<**String**> | Document public id, if output=url was used for document storage | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

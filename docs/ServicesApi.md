@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## add_watermark
 
-> models::InlineObject9 add_watermark(add_watermark_request)
+> models::InlineObject8 add_watermark(add_watermark_request)
 Add watermark
 
 Adds a text or an image watermark to PDF document from base64 string or a remote URL.
@@ -30,7 +30,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Required | Notes
 
 ## decrypt_document
 
-> models::InlineObject9 decrypt_document(encrypt_document_request)
+> models::InlineObject8 decrypt_document(encrypt_document_request)
 Decrypt document
 
 Decrypts an encrypted PDF document from base64 string or a remote URL.
@@ -60,7 +60,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Required | Notes
 
 ## encrypt_document
 
-> models::InlineObject9 encrypt_document(encrypt_document_request)
+> models::InlineObject8 encrypt_document(encrypt_document_request)
 Encrypt document
 
 Encrypts a PDF document from base64 string or a remote URL.
@@ -90,7 +90,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Required | Notes
 
 ## extract_form_fields
 
-> models::InlineObject14 extract_form_fields(extract_form_fields_request)
+> models::InlineObject13 extract_form_fields(extract_form_fields_request)
 Extract form fields
 
 Extracts form fields and their metadata from a PDF document using base64 string or a remote URL.
@@ -120,7 +120,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject14**](inline_object_14.md)
+[**models::InlineObject13**](inline_object_13.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Required | Notes
 
 ## fill_form_fields
 
-> models::InlineObject9 fill_form_fields(fill_form_fields_request)
+> models::InlineObject8 fill_form_fields(fill_form_fields_request)
 Fill form fields
 
 Fills form fields in a PDF document with provided data from base64 string or a remote URL.
@@ -150,7 +150,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Required | Notes
 
 ## make_accessible
 
-> models::InlineObject9 make_accessible(make_accessible_request)
+> models::InlineObject8 make_accessible(make_accessible_request)
 Make accessible
 
 Tags a PDF document for accessibility from base64 string or a remote URL.
@@ -180,7 +180,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject9**](inline_object_9.md)
+[**models::InlineObject8**](inline_object_8.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Required | Notes
 
 ## optimize_document
 
-> models::InlineObject12 optimize_document(optimize_document_request)
+> models::InlineObject11 optimize_document(optimize_document_request)
 Optimize document
 
 Optimizes the size of a PDF document from base64 string or a remote URL.
@@ -210,7 +210,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::InlineObject12**](inline_object_12.md)
+[**models::InlineObject11**](inline_object_11.md)
 
 ### Authorization
 
