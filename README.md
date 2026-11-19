@@ -353,6 +353,7 @@ Class | Method | HTTP request | Description
  - [CreateFacturXeInvoiceRequestTemplateId](docs/CreateFacturXeInvoiceRequestTemplateId.md)
  - [CreateWorkspaceRequest](docs/CreateWorkspaceRequest.md)
  - [CreateXRechnungEInvoiceRequest](docs/CreateXRechnungEInvoiceRequest.md)
+ - [DisplayModeParam](docs/DisplayModeParam.md)
  - [Document](docs/Document.md)
  - [DocumentAction](docs/DocumentAction.md)
  - [DocumentSignature](docs/DocumentSignature.md)

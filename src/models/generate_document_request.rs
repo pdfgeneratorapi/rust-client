@@ -39,6 +39,8 @@ pub struct GenerateDocumentRequest {
     pub attachments: Option<Vec<models::AttachmentsParamInner>>,
     #[serde(rename = "metadata", skip_serializing_if = "Option::is_none")]
     pub metadata: Option<Box<models::MetadataParam>>,
+    #[serde(rename = "display_mode", skip_serializing_if = "Option::is_none")]
+    pub display_mode: Option<Box<models::DisplayModeParam>>,
 }
 
 impl GenerateDocumentRequest {
@@ -54,6 +56,7 @@ impl GenerateDocumentRequest {
             empty_labels: None,
             attachments: None,
             metadata: None,
+            display_mode: None,
         }
     }
 }

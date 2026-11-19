@@ -38,6 +38,8 @@ pub struct GenerateDocumentBatchAsynchronousRequest {
     pub attachments: Option<Vec<models::AttachmentsParamInner>>,
     #[serde(rename = "metadata", skip_serializing_if = "Option::is_none")]
     pub metadata: Option<Box<models::MetadataParam>>,
+    #[serde(rename = "display_mode", skip_serializing_if = "Option::is_none")]
+    pub display_mode: Option<Box<models::DisplayModeParam>>,
 }
 
 impl GenerateDocumentBatchAsynchronousRequest {
@@ -53,6 +55,7 @@ impl GenerateDocumentBatchAsynchronousRequest {
             empty_labels: None,
             attachments: None,
             metadata: None,
+            display_mode: None,
         }
     }
 }

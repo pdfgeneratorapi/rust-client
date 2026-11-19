@@ -28,6 +28,8 @@ pub mod create_workspace_request;
 pub use self::create_workspace_request::CreateWorkspaceRequest;
 pub mod create_x_rechnung_e_invoice_request;
 pub use self::create_x_rechnung_e_invoice_request::CreateXRechnungEInvoiceRequest;
+pub mod display_mode_param;
+pub use self::display_mode_param::DisplayModeParam;
 pub mod document;
 pub use self::document::Document;
 pub mod document_action;

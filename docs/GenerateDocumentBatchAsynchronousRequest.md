@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **empty_labels** | Option<**i32**> | Number of label positions to leave empty at the start of the first sheet. Only applies to label templates. | [optional][default to 0]
 **attachments** | Option<[**Vec<models::AttachmentsParamInner>**](attachmentsParam_inner.md)> | Files embedded into the generated PDF as attachments. Only PDF and XML files are accepted. | [optional]
 **metadata** | Option<[**models::MetadataParam**](metadataParam.md)> |  | [optional]
+**display_mode** | Option<[**models::DisplayModeParam**](displayModeParam.md)> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
